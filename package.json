@@ -1,0 +1,71 @@
+{
+  "name": "npm-package-template",
+  "version": "0.0.1",
+  "description": "Demo npm package",
+  "author": "Stefan Natter (https://natterstefan.me/)",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "npm run clean && npm run compile-cjs && npm run compile-esm",
+    "clean": "rimraf ./dist",
+    "compile-cjs": "tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs",
+    "compile-esm": "tsc -p tsconfig.build.json --module es2015 --outDir dist/esm",
+    "prepare": "is-ci || husky install",
+    "lint": "tsc && eslint --cache \".\"",
+    "test": "jest --passWithNoTests"
+  },
+  "main": "./dist/cjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "demo"
+  ],
+  "homepage": "https://github.com/natterstefan/npm-package-template#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/eslint": "^8.4.1",
+    "@types/jest": "^27.4.1",
+    "all-contributors-cli": "^6.20.0",
+    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-ns": "^3.0.0",
+    "eslint-config-ns-ts-base": "3.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "jest": "^27.5.1",
+    "jest-preset-ns": "^1.1.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natterstefan/npm-package-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/natterstefan/npm-package-template/issues"
+  }
+}
