@@ -12,7 +12,7 @@ module.exports = {
     [
       '@semantic-release/changelog',
       {
-        changelogTitle: '# npm-package-template Changelog',
+        changelogTitle: '# npm-package-quickstart Changelog',
       },
     ],
     // publish on npm

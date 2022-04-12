@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-template",
+  "name": "npm-package-quickstart",
   "version": "0.0.1",
   "description": "Demo npm package",
   "author": "Stefan Natter (https://natterstefan.me/)",
@@ -28,7 +28,7 @@
   "keywords": [
     "demo"
   ],
-  "homepage": "https://github.com/natterstefan/npm-package-template#readme",
+  "homepage": "https://github.com/natterstefan/npm-package-quickstart#readme",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -63,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/natterstefan/npm-package-template.git"
+    "url": "git+https://github.com/natterstefan/npm-package-quickstart.git"
   },
   "bugs": {
-    "url": "https://github.com/natterstefan/npm-package-template/issues"
+    "url": "https://github.com/natterstefan/npm-package-quickstart/issues"
   }
 }
