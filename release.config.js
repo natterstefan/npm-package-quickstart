@@ -21,9 +21,8 @@ module.exports = {
     // publish on npm
     '@semantic-release/npm',
     // publish a new release on github
-    '@semantic-release/github',
     [
-      '@semantic-release/git',
+      '@semantic-release/github',
       {
         assets: [
           'dist',
@@ -32,6 +31,16 @@ module.exports = {
           'README.md',
           'package.json',
         ],
+        // Set to false to disable opening an issue when a release fails.
+        failComment: false,
+        failTitle: false,
+        releasedLabels: false,
+      },
+    ],
+    [
+      '@semantic-release/git',
+      {
+        assets: ['CHANGELOG.md', 'README.md', 'package.json'],
         message:
           // eslint-disable-next-line no-template-curly-in-string
           'chore: Release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
