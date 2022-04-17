@@ -19,18 +19,17 @@ module.exports = {
       },
     ],
     // publish on npm
-    '@semantic-release/npm',
+    [
+      '@semantic-release/npm',
+      {
+        tarballDir: 'dist-npm',
+      },
+    ],
     // publish a new release on github
     [
       '@semantic-release/github',
       {
-        assets: [
-          'dist',
-          'LICENSE',
-          'CHANGELOG.md',
-          'README.md',
-          'package.json',
-        ],
+        assets: 'dist-npm/*.tgz',
         // Set to false to disable opening an issue when a release fails.
         failComment: false,
         failTitle: false,

@@ -5,10 +5,11 @@
   "author": "Stefan Natter (https://natterstefan.me/)",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "npm run clean && npm run compile-cjs && npm run compile-esm",
-    "clean": "rimraf ./dist",
+    "build": "npm run compile-cjs && npm run compile-esm",
+    "clean": "rimraf ./dist ./dist-npm",
     "compile-cjs": "tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs",
     "compile-esm": "tsc -p tsconfig.build.json --module es2015 --outDir dist/esm",
+    "prebuild": "yarn clean",
     "prepare": "is-ci || husky install",
     "lint": "tsc && eslint --cache \".\"",
     "test": "jest --passWithNoTests"
