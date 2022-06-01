@@ -43,7 +43,7 @@
     "@types/eslint": "^8.4.1",
     "@types/jest": "^27.4.1",
     "all-contributors-cli": "^6.20.0",
-    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-ns": "^3.0.0",
